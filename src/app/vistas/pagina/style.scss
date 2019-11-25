@@ -1,0 +1,79 @@
+@import '../../variables.scss';
+
+.wrapper{
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.lineas{
+    position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100vw;
+	max-width: 100%;
+    min-height: 100vh;
+    background: white;
+}
+
+.titulolinea {
+    position: absolute;
+}
+.contenedor{
+    box-sizing: border-box;
+    width: 80vw;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    a{
+        display: relative;
+        box-sizing: border-box;
+        box-shadow: 5px 10px 8px #888888;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        width: 30vw;
+        height: 30vh;
+        padding: 3vmin;
+        margin: 6vmin;
+        background: black;
+        text-decoration: none;
+        color: white;
+        .titulo{
+            position: absolute;
+            bottom: 2vh;
+            left: 2vw;
+            z-index: 150;
+        }
+       &:hover {
+           opacity: .7;
+       }
+    }
+}
+
+@media screen and (max-width: $celular) {
+    .lineas{
+        a{
+            width: 90vw;
+        }
+    }
+}
+
+@media screen and (max-width: $small) {
+    .contenedor {
+        width: 95vw;
+    }
+    .titulolinea {
+        position: relative;
+    }
+    .titulogeneral {
+        text-align: center;
+    }
+}

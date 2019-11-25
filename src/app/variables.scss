@@ -1,0 +1,36 @@
+ //global
+
+
+$rojo: #c44343;
+$gris: #707070;
+$celular: 800px;
+$tablet: 768px;
+$small: 425px;
+$xsmall: 375px;
+
+html{
+	scroll-behavior: smooth;
+}
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	background: white;
+}
+button{
+	box-sizing: border-box;
+	padding: 1vmin 2vmin;
+	margin: auto;
+	color: white;
+	background: $rojo;
+	border-radius: .5vh;
+	border:none;
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+	&:hover{
+		background:lighten($rojo,5%);
+		box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+	}
+	&:active{
+		background:darken($rojo,5%);
+		box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.75);
+	}
+}

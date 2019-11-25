@@ -1,0 +1,86 @@
+@import '../variables.scss';
+
+.hero{
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 85vh;
+    overflow:hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .85;
+    }
+}
+
+.dobleHome{
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    overflow:hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .dobleTexto{
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: left;
+        h1{
+            font-size: 5vmin;
+            width: 100vw;
+            max-width: 100%;
+            align-self: center;
+            text-align: center;
+            span{
+                background: $rojo;
+                color: white;
+            }
+        }
+        p{
+            font-size: 3vmin;
+            align-self: center;
+            text-align: center;
+        }
+    }
+    .decorador{
+        position: absolute;
+        top: 75vh;
+        left: 23vw;
+        width: 30vmax;
+        height: 2vmin;
+        z-index: 150;
+        background: $rojo;
+        content: "";
+    }
+}
+
+@media screen and (max-width: $celular) {
+    .dobleHome{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        .dobleTexto{
+            width: 100vw;
+            max-width: 100%;
+        }
+        .decorador{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: $small) {
+    .hero{
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width: $xsmall) {
+    .hero {
+        height: 60vh;
+    }
+}

@@ -1,0 +1,202 @@
+@import '../../variables.scss';
+
+.historia {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 10%;
+}
+
+.titulo {
+    padding:1vmin 2vmin;
+    background: $rojo;
+    color: white; 
+}
+
+.foto {
+    border-radius: 10%;
+}
+.nosotros, .nosotros2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 5vh;
+    justify-content: space-around;
+    align-items: center;
+    width: 95vw;
+    max-width: 100%;
+}
+
+.textonos {
+    text-align: center;
+    font-size: 16px;
+    padding: 0 30px;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+.textospan {
+    padding:1vmin 1vmin;
+    background-color: $rojo;
+    color: white;
+}
+
+.showrooms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 150vw;
+    max-width: 100%;
+    margin-top: 5vh;
+    margin-right:  auto;
+    height: 40vh;
+}
+
+.flip {
+    background-color: transparent;
+    width: 25vw;
+}
+
+.flipinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip:hover .flipinner {
+    transform: rotateY(180deg);
+  }
+
+  .cardfront, .cardback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .cardfront {
+    color: black;
+  }
+  
+  .cardback {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    border-radius:10%;
+    background-color: $rojo;
+    transform: rotateY(180deg);
+    color: white;
+    width: 25vw;
+    height: 20vw;
+
+  }
+
+.card {
+        width: 25vw;
+        border-radius: 10%;    
+    height: 20vw;
+}
+
+.textoshowrooms {
+  text-align: center;
+}
+
+.showroomsmobile {
+  display:none;
+}
+
+@media screen and (max-width: 1025px) {
+  .foto {
+    width: 60vw;
+  }
+  .nodisplay {
+    display: none;
+  }
+  .textospan {
+    padding:0.5vmin 0.5vmin;
+  }
+  .showrooms {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .historia {
+    margin-top: 15%;
+  }
+  .nosotros {
+    flex-direction: column;
+  }
+
+  .nosotros2 {
+    flex-direction: column-reverse;
+    margin-top: auto;
+  }
+  .cardback {
+    font-size: 14px;
+  }
+  .showrooms {
+    height: 25vh;
+  }
+}
+
+@media screen and (max-width: $small) {
+  .titulo {
+    font-size: 20px;
+  }
+  .nosotros {
+    margin: 2vh;
+  }
+  .foto {
+    width: 80vw;
+  }
+  .textonos, .textoshowrooms {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .textospan{
+    padding: 0.1vmin 0.1vmin;
+  }
+  .showrooms {
+    display: none;
+  }
+  .showroomsmobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .showroom {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    justify-content: space-around;
+    margin-bottom: 4vh;
+    img {
+      width: 40vw;
+      border-radius: 10%;    
+      height: 25vw;
+    }
+  }
+   .showroomdireccion{
+     display: flex;
+     flex-direction: column;
+     font-size: 12px;
+     line-height: 2px;
+   }
+}
+
+@media screen and (max-width: $xsmall) {
+  .historia {
+    margin-top: 20%;
+  }
+}

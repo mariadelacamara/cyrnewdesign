@@ -1,0 +1,142 @@
+@import '../../variables.scss';
+
+.piedepagina{
+	box-sizing: border-box;
+	width: 100vw;
+	max-width: 100%;
+	height: 35vh;
+	bottom: 0;
+	margin: 0;
+	background:$rojo;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	justify-content: space-between;
+	color:white;
+	a{
+		color: white;
+		text-decoration: none;
+	}
+	.contenedorFooter{
+		margin: auto;
+		width: 90vw;
+		height: 80%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		.contenedorFooter{
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			h1{
+				width: 80%;
+				border-bottom: solid 1px white;
+				padding: 1vh;
+				font-size: 2vh;
+				margin: 0;
+			}
+			ul{
+				width: 80%;
+				display: flex;
+				flex-direction: column;
+				height: 70%;
+				margin-top: 0;
+				li{
+					margin-top: 1vh;
+					display: flex;
+					flex-direction: row;
+					font-size: 1.7vh;
+					align-items: center;
+					i{
+						margin-right: .5vh;
+					}
+					.doble{
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						justify-content: center;
+						p{
+							font-size: 1.2vh;
+							margin: 0;
+						}
+						p:first-child{
+							font-size: 1.7vh;
+						}
+					}
+				}
+				&.redes{
+					flex-direction: row;
+					align-items: flex-start;
+					li{
+						margin: 1vh;
+						width: 2.5vmax;
+						height: 2.5vmax;
+						background: white;
+						color: $rojo;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border-radius: 10vh;
+						font-size: 1vmax;
+						a{
+							color:$rojo;
+							text-decoration:none;
+						}
+						i{
+							text-align:right;
+						}
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $celular) {
+		.contenedorFooter{
+			height: auto;
+			.contenedorFooter:first-child{
+				display: none;
+			}
+			.contenedorFooter:last-child{
+				.redes{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					li{
+						padding: 3vw;
+						i{
+							font-size: 4vw;
+						}
+					}
+				}
+				h1{
+					display: none;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 425px) {
+		.contenedorFooter{
+			.contenedorFooter:first-child{
+				display: none;
+			}
+			.contenedorFooter:last-child{
+				.redes{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					li{
+						padding: 3vw;
+						i{
+							font-size: 4vw;
+						}
+					}
+				}
+				h1{
+					display: none;
+				}
+			}
+		}
+	}
+}

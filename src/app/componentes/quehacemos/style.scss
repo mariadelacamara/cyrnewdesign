@@ -1,0 +1,235 @@
+@import '../../variables.scss';
+
+.contenedor{
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+.cocinas{
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    .texto{
+        width: 45vw;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        transition: all .3s ease;
+        h1{
+            font-size: 3.5vmin;
+            width: 40%;
+        }
+    }
+    .imagen{
+        width: 55vw;
+        height: 50vh;
+        overflow: hidden;
+        transition: all .3s ease;
+        img{
+            width:100%;
+            object-fit: cover;
+        }
+    }
+    .titulo{
+        position: absolute;
+        top: 10vh;
+        left: 38vw;
+        background: $rojo;
+        color: white;
+        padding: 1vmin 4vmin;
+        font-size: 3vmin;
+        font-weight: 100;
+    }
+    .decorador{
+        position: absolute;
+        top: 13vh;
+        left: .3vw;
+        width: 10vw;
+        height: 2vmin;
+        z-index: 150;
+        background: $rojo;
+        content: "";
+    }
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+        .imagen,.texto{
+            opacity: .3;
+        }
+    }
+}
+.triple{
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .decorador{
+        position: absolute;
+        top: -1vmin;
+        left: 33.3vw;
+        width: 33.3vw;
+        height: 1vmin;
+        background: $rojo;
+        content: "";
+        z-index: 150;
+    }
+    .item{
+        position: relative;
+        width: 33.3vw;
+        height: 50vh;
+        overflow: hidden;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        h3{
+            box-sizing: border-box;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            top: 0;
+            left: 0;
+            height: 30vh;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            text-align: right;
+            padding: 2vh 1vh;
+            background: #c44343;
+            color: white;
+        }
+        img{
+            transition: all .3s ease;
+            height: auto;
+            object-fit: cover;
+        }
+        &:hover{
+            img{
+                opacity: .3;
+            }
+        }
+    }
+}
+.banos{
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    .imagen{
+        width: 55vw;
+        height: 50vh;
+        overflow: hidden;
+        transition: all .3s ease;
+        img{
+            width:100%;
+            object-fit: cover;
+        }
+    }
+    .texto{
+        width: 45vw;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        transition: all .3s ease;
+        h1{
+            font-size: 3.5vmin;
+            width: 40%;
+        }
+    }
+    .titulo{
+        position: absolute;
+        top: 10vh;
+        right: 38vw;
+        background: $rojo;
+        color: white;
+        padding: 1vmin 4vmin;
+        font-size: 3vmin;
+        font-weight: 100;
+    }
+    .decorador1{
+        position: absolute;
+        top: 10vh;
+        right: .3vw;
+        height: 2vmin;
+        width: 10vw;
+        background: $rojo;
+        content: "";
+    }
+    .decorador2{
+        position: absolute;
+        bottom: 0vh;
+        right: .3vw;
+        height: 1vmin;
+        width: 20vw;
+        background: $rojo;
+        content: "";
+    }
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+        .imagen,.texto{
+            opacity: .3;
+        }
+    }
+}
+
+@media screen and (max-width: $celular) {
+    .contenedor{
+        height: 250vh;
+        flex-direction: column;
+    }
+    .cocinas,.banos{
+        height: 50vh;
+        width: 100vw;
+        max-width: 100%;
+        .titulo{
+            font-size: 4vmin;
+        }
+        img{
+            height: 100%;
+        }
+    }
+    .triple{
+        height: 150vh;
+        flex-direction: column;
+        .decorador{
+            width: 100%;
+            left: 0;
+        }
+        .item{
+            height: 50vh;
+            width: 100vw;
+            max-width: 100%;
+            img{
+                width: 100vw;
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+

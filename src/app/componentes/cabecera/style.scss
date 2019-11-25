@@ -1,0 +1,231 @@
+@import '../../variables.scss';
+
+.cabecera{
+    position: fixed;
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 100;
+}
+
+.menuBoton{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    cursor: pointer;
+    width: 15vmin;
+    height: 15vmin;
+    background: $rojo;
+    color: white;
+    span{
+        position: absolute;
+        left: 4vmin;
+        top: 7vmin;
+        width: 7vmin;
+        height: 4px;
+        background: white;
+        content: "";
+        transition: all .3s ease-out;
+    }
+    span:first-child{
+        top:5.5vmin;
+    }
+    span:last-child{
+        top:8.5vmin;
+        width: 2vmin;
+    }
+    &.cerrado{
+        span{
+            position: absolute;
+            left: 5vmin;
+            top: 7vmin;
+            width: 5vmin;
+            height: 4px;
+            background: white;
+            content: "";
+        }
+        span:first-child{
+            transform: rotate(-45grad);
+        }
+        span:nth-child(2){
+            opacity: 0;
+        }
+        span:last-child{
+            transform: rotate(45grad);
+        }
+    }
+}
+
+.menu{
+    position: absolute;
+    top: 15vh;
+    width: 20vw;
+    background-color: rgba(255,255,255,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .6s ease-out;
+    ul{
+        list-style: none;
+        height: 60vh;
+        width: 20vw;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        li{
+            width: 20vw;
+            height: 10vh;
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: black;
+                text-decoration: none;
+                font-weight: bold;
+                height: 10vh;
+                &:hover{
+                    background-color: #c44343;
+                    color: white;
+                }
+            }
+        }
+    }
+    &.cerrado{
+        left: -30vw;
+    }
+    &.abierto{
+        left: 0;
+    }
+}
+
+.redes{
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    img{
+        height: 15vh;
+        width: 15vh;
+    }
+    i {
+        font-size: 20px;
+    }
+    .divisor{
+        width: 2vh;
+    }
+    .item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 7vh;
+        height: 7vh;
+        border-radius: 3.5vh;
+        background: $rojo;
+        text-decoration: none;
+        color: white;
+        box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    }
+}
+@media screen and (max-width: $celular) {
+    .menu{
+        width: 50vw;
+        &.cerrado{
+            left: -50vw;   
+        }
+    }
+    .redes{
+        width: 40vw;
+        justify-content: flex-end;
+        .divisor{
+            width: 1vw;
+        }
+    }
+    .menuBoton span {
+            height: 2px;
+        }
+}
+
+@media screen and (max-width: $tablet) {
+    .menu {
+        width: 30vw;
+    }
+    .cabecera {
+        height: 15vh;
+    }
+    .redes{
+        justify-content: space-around;
+        .item {
+        width: 5vw;
+        height: 5vh;
+        }
+        img{
+            width: 11vw;
+            height: 11vh;
+            object-fit: cover;
+        }
+        i {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: $small){
+    .menu {
+        top: 9vh;
+        ul {
+            height: 40vh;
+        }
+    }
+    .cabecera {
+        height: 9vh;
+    }
+    .menuBoton {
+        height: 9vh;
+    }
+    .redes{
+        width: 50vw;
+        justify-content: space-around;
+        .item {
+            width: 7vw;
+        height: 4vh;
+        }
+        img{
+            width: 15vw;
+            height: 8vh;
+            object-fit: cover;
+        }
+        i {
+            font-size: 12px;
+        }
+    }
+    .menu li {
+        font-size:12px;
+    }
+}
+
+@media screen and (max-width: $xsmall){
+    .redes {
+        width: 50vw;
+        .item {
+            width: 7vw;
+            height: 4vh;
+        }
+        img {
+            width: 18vw;
+        }
+        i{
+            font-size: 10px;
+        }
+    }
+}

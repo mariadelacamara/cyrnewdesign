@@ -1,0 +1,80 @@
+@import '../../variables.scss';
+
+.link {
+    text-decoration: none;
+    background: black;
+}
+.container {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+        .imagen,.texto{
+            opacity: .3;
+        }
+    }
+}
+
+.imagen{
+    width: 55vw;
+    height: 50vh;
+    overflow: hidden;
+    transition: all .3s ease;
+    img{
+        position: absolute;
+    width: 55%;
+    height: 100%;
+        object-fit: cover;
+    }
+    &:hover{
+        opacity: .3;
+    }
+}
+
+.texto{
+    width: 45vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    transition: all .3s ease;
+    h1{
+        font-size: 3.5vmin;
+        width: 40%;
+    }
+    &:hover{
+        opacity: .3;
+    }
+}
+
+.titulo {
+    position: absolute;
+    top: 1vh;
+    left: 38vw;
+    background: #c44343;
+    color: white;
+    padding: 1vmin 4vmin;
+    font-size: 3vmin;
+    font-weight: 100;
+    margin-top: 10vh;
+}
+
+.decorador{
+    position: absolute;
+    top: 13vh;
+    right: .3vw;
+    width: 10vw;
+    height: 2vmin;
+    z-index: 150;
+    background: $rojo;
+    content: "";
+}

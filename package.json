@@ -1,0 +1,35 @@
+{
+  "name": "cyr",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react-router-hash-link": "^1.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.3.2",
+    "@typescript-eslint/parser": "^2.3.2",
+    "autoprefixer": "^9.6.1",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.15.1",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1",
+    "sass": "^1.23.0-module.beta.1",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "@types/react": "^16.8.24",
+    "@types/react-dom": "^16.8.5",
+    "@types/react-router-dom": "^4.3.4",
+    "classnames": "^2.2.6",
+    "emailjs-com": "^2.3.2",
+    "node-sass": "^4.12.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "react-router-hash-link": "^1.2.2",
+    "ts-transformer-keys": "^0.3.5"
+  },
+  "scripts": {
+    "start:dev": "parcel src/index.html",
+    "start:build": "parcel build src/index.html --public-url ./ --out-dir build/app"
+  }
+}
